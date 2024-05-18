@@ -1,6 +1,7 @@
 // src/views/Login/Login.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import LogoMarvel from '../../components/common/LogoMarvel/LogoMarvel';
 import Layout from '../../components/common/Layout/Layout';
 import {
@@ -14,10 +15,14 @@ import {
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-   navigate('/home');
+    login(username, password); // Log in the user
+    navigate('/home');
   };
 
   return (
@@ -29,8 +34,18 @@ const Login: React.FC = () => {
             <h1>Bem-vindo(a) de volta!</h1>
             <p>Acesse sua conta:</p>
           </FormTitle>
-          <Input type="text" placeholder="Usuário" />
-          <Input type="password" placeholder="Senha" />
+          <Input
+            type="text"
+            placeholder="Usuário"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <Button type="submit">Entrar</Button>
         </Form>
         <Register>
@@ -42,3 +57,5 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+
+

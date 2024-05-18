@@ -25,6 +25,10 @@ width: 100%;
     height: 100%;
     object-fit: fill;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ImageAvengers = styled.div`

@@ -5,15 +5,19 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  width: 50%;
   padding-top: 90px;
 
   @media (max-width: 768px) {
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
 export const Form = styled.form`
+  padding-top: 2.5rem;
   display: flex;
   flex-direction: column;
   width: 80%;
