@@ -1,30 +1,40 @@
+
+
 /* src/styles/fonts.css */
 @font-face {
-  font-family: 'Kastelov';
-  src: url('../assets/fonts/Kastelov/Kastelov-Regular.otf') format('opentype');
+  font-family: 'Kastelov - Axiforma';
+  src: url('../assets/fonts/Kastelov - Axiforma Medium.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Kastelov';
-  src: url('../assets/fonts/Kastelov/Kastelov-Bold.otf') format('opentype');
+  src: url('../assets/fonts/Kastelov - Axiforma Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Kastelov';
-  src: url('../assets/fonts/Kastelov/Kastelov-Italic.otf') format('opentype');
+  src: url('../assets/fonts/Kastelov - Axiforma Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Kastelov';
-  src: url('../assets/fonts/Kastelov/Kastelov-BoldItalic.otf') format('opentype');
+  src: url('../assets/fonts/Kastelov - Axiforma Bold Italic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Marvel';
+  src: url('../assets/fonts/MarvelRegular-Dj83.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Add other variations as needed */

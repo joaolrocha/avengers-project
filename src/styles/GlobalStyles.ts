@@ -2,6 +2,7 @@
 import { createGlobalStyle } from 'styled-components';
 import './fonts.css'; // Import the font configuration
 
+
 const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
@@ -10,8 +11,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Kastelov', Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Kastelov - Axiforma', 'Marvel', Arial, sans-serif;
+    background-color: black;
     color: #333;
   }
 `;

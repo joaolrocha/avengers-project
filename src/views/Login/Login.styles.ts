@@ -1,39 +1,15 @@
 // src/views/Login/Login.styles.ts
 import styled from 'styled-components';
 
-export const LoginContainer = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  background-color: black;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
-
 export const FormContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  padding-top: 90px;
 
   @media (max-width: 768px) {
     width: 100%;
-  }
-`;
-
-export const ImageContainer = styled.div`
-  /* flex: 1; */
-  width: 50%;
-  /* background-size: cover; */
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  @media (max-width: 768px) {
-    display: none;
   }
 `;
 
@@ -45,29 +21,64 @@ export const Form = styled.form`
 
   & h1 {
     color: #ff0000;
+    font-family: 'Kastelov - Axiforma', Arial, sans-serif;
   }
 
   & p {
     color: #84848D;
+    font-family: 'Kastelov - Axiforma', Arial, sans-serif;
   }
 `;
 
 export const Input = styled.input`
-
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 380px;
+  height: 70px;
+  border-radius: 40px;
+  font-family: 'Kastelov - Axiforma', Arial, sans-serif;
+  font-size: 22px;
+  padding-left: 2rem;
 `;
 
 export const Button = styled.button`
   padding: 10px;
-  background-color: #007BFF;
+  background-color: #ff0000;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 40px;
   cursor: pointer;
+  width: 380px;
+  height: 70px;
+  font-size: 28px;
+  font-family: 'Kastelov - Axiforma', Arial, sans-serif;
   &:hover {
     background-color: #0056b3;
+  }
+`;
+
+export const FormTitle = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.3rem;
+`;
+
+export const Register = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.875rem;
+
+  & p {
+    color: #84848D;
+    font-size: 1rem;
+    font-family: 'Kastelov - Axiforma', Arial, sans-serif;
+
+    & span {
+      color: #ff0000;
+    }
   }
 `;

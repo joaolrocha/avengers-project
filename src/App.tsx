@@ -1,10 +1,21 @@
-import './App.css';
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import GlobalStyles from './styles/GlobalStyles';
 import Login from './views/Login/Login';
+import Home from './views/Home/Home';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Login />
+    <Router>
+      <GlobalStyles />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
