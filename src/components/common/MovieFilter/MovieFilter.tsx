@@ -3,9 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FilterContainer = styled.div`
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
+ display: flex;
+    justify-content: flex-start;
+    margin-left: 10rem;
+    margin-top: 3rem;
 `;
 
 const Select = styled.select`

@@ -12,7 +12,8 @@ import {
   ModalTitle,
   RatingStars,
   Star,
-  AvailabilityContainer
+  AvailabilityContainer,
+  DescriptionContainer
 } from '../ModalDetails/ModalDetails.styles'
 
 interface MovieDetailsModalProps {
@@ -32,13 +33,17 @@ const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({ isOpen, onClose, 
         <ModalContentRight>
           <ModalTitle>{movie.title}</ModalTitle>
 
+          <DescriptionContainer>
+            <p>{movie.description}</p>
+          </DescriptionContainer>
+
           <AvailabilityContainer>
-            <h3>Available On</h3>
+            <h3>Disponivel em streaming:</h3>
             <p>{movie.availableOn}</p>
           </AvailabilityContainer>
 
           <FansContainer>
-            <h3>Fan Ratings</h3>
+            <h3>Crítica</h3>
             <RatingStars>
               {[...Array(movie.rating)].map((_, index) => (
                 <Star key={index}>★</Star>

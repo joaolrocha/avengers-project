@@ -7,7 +7,7 @@ align-items: center;
 justify-content: center;
 gap: 3rem;
 
-padding-top: 5rem;
+margin-top: 5rem;
 `
 
 export const CarouselWrapper = styled.div`

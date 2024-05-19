@@ -1,9 +1,9 @@
 // src/data/mockMovies.ts
 
-import IronMan from '../assets/images/ironman1.svg';
+import IronMan from '../assets/images/big-poster-filme-iron-man-2008-lo04-tamanho-90x60-cm-marvel.svg';
 import IronMan2 from '../assets/images/ironman2.svg';
 import Thor from '../assets/images/thor.svg';
-import CaptainAmerica from '../assets/images/capitaoamerica.svg'
+import CaptainAmerica from '../assets/images/unnamed.svg'
 import CaptainMarvel from '../assets/images/capitamarvel.svg';
 
 export interface Movie {

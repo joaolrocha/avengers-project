@@ -1,7 +1,7 @@
 // src/views/Movies/Movies.tsx
 import React, { useState } from 'react';
 import Layout from '../../components/common/Layout/Layout';
-import mockMovies, { Movie } from '../../data/mockMovies';
+import useMockMovies from '../../hooks/useMockMovies';
 import MainCard from '../../components/common/MainCard/MainCard';
 
 import MovieFilter from '../../components/common/MovieFilter/MovieFilter';
@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import redArrow from '../../assets/images/redArrow.svg';
+import { Movie } from '../../data/mockMovies';
 import MovieDetailsModal from '../../components/common/ModalMoviesDetails/ModalMoviesDetails';
 
 const NextArrow = (props: any) => {
@@ -37,6 +38,7 @@ const PrevArrow = (props: any) => {
 };
 
 const Movies: React.FC = () => {
+  const movies = useMockMovies();
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [sortBy, setSortBy] = useState<string>('releaseDate');
 
@@ -48,7 +50,7 @@ const Movies: React.FC = () => {
     setSelectedMovie(null);
   };
 
-  const sortedMovies = [...mockMovies].sort((a, b) => {
+  const sortedMovies = [...movies].sort((a, b) => {
     if (sortBy === 'releaseDate') {
       return new Date(a.releaseDate).getTime() - new Date(b.releaseDate).getTime();
     }
@@ -102,4 +104,3 @@ const Movies: React.FC = () => {
 };
 
 export default Movies;
-

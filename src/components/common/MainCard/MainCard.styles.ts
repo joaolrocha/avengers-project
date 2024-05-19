@@ -8,12 +8,15 @@ export const Card = styled.div`
   margin: 10px;
   text-align: center;
   position: relative;
+  height: 439px;
+  width: 289px;
 `;
 
 export const CardImage = styled.img`
-  width: 100%;
-  height: 100%;
+  height: 439px;
+  width: 289px;
   border-radius: 10px;
+  object-fit: none;
 `;
 
 export const CardName = styled.h2`
@@ -33,6 +36,7 @@ export const CardName = styled.h2`
   height: 235px;
   width: 290px;
   box-sizing: border-box;
+  border-radius: 30px;
 `;
 
 export const CardDescription = styled.p`
