@@ -36,7 +36,16 @@ export const CardName = styled.h2`
 `;
 
 export const CardDescription = styled.p`
-  font-family: 'Kastelov - Axiforma', Arial, sans-serif;
+  font-family: 'Kastelov - Axiforma Thin', Arial, sans-serif;
   color: #FFF;
   font-size: 12px;
+  height: 130px;
 `;
+
+export const ButtonDetails = styled.div `
+    font-family: 'Kastelov - Axiforma Thin', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFF;
+    cursor: pointer;
+`

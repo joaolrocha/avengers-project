@@ -1,26 +1,26 @@
-
-import homemAranha from '../../../assets/images/ironman.png';
-import { Card, CardContent, CardDescription, CardImage, CardName } from './MainCard.styles';
+// src/components/common/MainCard/MainCard.tsx
+import React from 'react';
+import { ButtonDetails, Card, CardContent, CardDescription, CardImage, CardName } from './MainCard.styles';
+import { Hero } from '../../../data/mockHeroes';
 
 interface MainCardProps {
-  id: number;
-  image: string;
-  name: string;
-  description: string;
+  hero: Hero;
+  onDetailsClick: () => void;
 }
 
-const MainCard: React.FC<MainCardProps> = ({ id, image, name, description }) => {
+const MainCard: React.FC<MainCardProps> = ({ hero, onDetailsClick }) => {
   return (
     <Card>
-      <CardImage src={image} alt={name} />
+      <CardImage src={hero.image} alt={hero.name} />
       <CardContent>
-        <CardName>{name}</CardName>
-        <CardDescription>{description}</CardDescription>
+        <CardName>{hero.name}</CardName>
+        <CardDescription>{hero.description}</CardDescription>
+        <ButtonDetails onClick={onDetailsClick}>
+          Ver detalhes
+        </ButtonDetails>
       </CardContent>
     </Card>
-
-  )
+  );
 }
 
-
-export default MainCard
+export default MainCard;

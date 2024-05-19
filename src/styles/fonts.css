@@ -17,6 +17,13 @@
 
 @font-face {
   font-family: 'Kastelov';
+  src: url('../assets/fonts/Kastelov - Axiforma Thin.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kastelov';
   src: url('../assets/fonts/Kastelov - Axiforma Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
