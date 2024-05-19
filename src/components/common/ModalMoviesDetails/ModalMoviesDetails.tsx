@@ -13,8 +13,11 @@ import {
   RatingStars,
   Star,
   AvailabilityContainer,
-  DescriptionContainer
+  DescriptionContainer,
+  ContainerLogos
 } from '../ModalDetails/ModalDetails.styles'
+
+import disneyIcon from '../../../assets/images/Componente 3 – 1.svg'
 
 interface MovieDetailsModalProps {
   isOpen: boolean;
@@ -39,7 +42,10 @@ const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({ isOpen, onClose, 
 
           <AvailabilityContainer>
             <h3>Disponivel em streaming:</h3>
-            <p>{movie.availableOn}</p>
+            {/* <p>{movie.availableOn}</p> */}
+            <ContainerLogos>
+            <img src={disneyIcon} style={{width: '50px', height: '50px'}} alt="" />
+            </ContainerLogos>
           </AvailabilityContainer>
 
           <FansContainer>

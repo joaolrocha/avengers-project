@@ -6,7 +6,10 @@ const FilterContainer = styled.div`
  display: flex;
     justify-content: flex-start;
     margin-left: 10rem;
-    margin-top: 3rem;
+
+    position: absolute;
+    top: 1.5rem;
+
 `;
 
 const Select = styled.select`

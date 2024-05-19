@@ -13,8 +13,12 @@ import {
   RatingStars,
   Star,
   AvailabilityContainer,
-  DescriptionContainer
+  DescriptionContainer,
+  ContainerLogos
 } from '../ModalDetails/ModalDetails.styles';
+
+import americanasIcon from '../../../assets/images/americanas.svg'
+import amazonIcon from '../../../assets/images/amazon.svg'
 
 interface ComicDetailsModalProps {
   isOpen: boolean;
@@ -38,12 +42,15 @@ const ComicDetailsModal: React.FC<ComicDetailsModalProps> = ({ isOpen, onClose, 
           </DescriptionContainer>
 
           <AvailabilityContainer>
-            <h3>Available On</h3>
-            <p>{comic.availableOn}</p>
+            <h3>Disponivel em</h3>
+            <ContainerLogos>
+            <img src={americanasIcon} style={{width: '50px'}} alt="" />
+            <img src={amazonIcon} style={{width: '50px'}} alt="" />
+            </ContainerLogos>
           </AvailabilityContainer>
 
           <FansContainer>
-            <h3>Fan Ratings</h3>
+            <h3>Crítica</h3>
             <RatingStars>
               {[...Array(comic.rating)].map((_, index) => (
                 <Star key={index}>★</Star>

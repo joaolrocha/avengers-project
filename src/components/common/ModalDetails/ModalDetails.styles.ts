@@ -28,6 +28,8 @@ export const ModalContent = styled.div`
     flex-direction: column;
     width: 90%;
     height: auto;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -41,7 +43,8 @@ export const ModalContentLeft = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 50%;
+
   }
 `;
 
@@ -180,3 +183,8 @@ export const DescriptionContainer = styled.div`
     }
   }
 `;
+
+export const ContainerLogos = styled.div`
+  width: 100%;
+  display: flex;
+`

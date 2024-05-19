@@ -1,107 +1,107 @@
 
-# Marvel App
+# Aplicativo Marvel
 
-Welcome to the Marvel App! This project is a web application that showcases Marvel characters, movies, and comics with a responsive design and smooth user experience. Users can log in, view details about their favorite Marvel heroes, movies, and comics, and navigate through a carousel of items. The project is built using React, TypeScript, Styled Components, and custom hooks.
+Bem-vindo ao Aplicativo Marvel! Este projeto é um aplicativo web que apresenta personagens, filmes e quadrinhos da Marvel com um design responsivo e uma experiência de usuário suave. Os usuários podem fazer login, visualizar detalhes sobre seus heróis, filmes e quadrinhos favoritos da Marvel e navegar por um carrossel de itens. O projeto é construído usando React, TypeScript, Styled Components e hooks personalizados.
 
-## Table of Contents
+## Índice
 
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Custom Hooks](#custom-hooks)
-- [Screenshots](#screenshots)
-- [Getting Started](#getting-started)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Hooks Personalizados](#hooks-personalizados)
+- [Capturas de Tela](#capturas-de-tela)
+- [Começando](#começando)
 
-## Technologies Used
+## Tecnologias Utilizadas
 
-- **React**: A JavaScript library for building user interfaces.
-- **TypeScript**: A superset of JavaScript that adds static typing.
-- **Styled Components**: A library for styling React components using tagged template literals.
-- **React Router**: A collection of navigational components that compose declaratively with your application.
-- **Slick Carousel**: A carousel/slider library for React.
+- **React**: Uma biblioteca JavaScript para construir interfaces de usuário.
+- **TypeScript**: Um superset do JavaScript que adiciona tipagem estática.
+- **Styled Components**: Uma biblioteca para estilizar componentes React usando literais de template marcados.
+- **React Router**: Uma coleção de componentes de navegação que se compõem de forma declarativa com sua aplicação.
+- **Slick Carousel**: Uma biblioteca de carrossel/slider para React.
 
-## Project Structure
+## Estrutura do Projeto
 
-The project is structured as follows:
+O projeto está estruturado da seguinte forma:
 
 ```
 src/
-|-- assets/           # Static assets like images and fonts
-|-- components/       # Reusable components
-|   |-- common/       # Common components used across different views
-|   |   |-- Header/   # Header component with responsive navigation
-|   |   |-- Layout/   # Layout component for consistent page layout
-|   |   |-- MainCard/ # Card component used to display heroes, movies, and comics
-|   |-- hooks/        # Custom hooks for fetching mock data
-|-- data/             # Mock data for heroes, movies, and comics
-|-- styles/           # Global and reusable styles
-|-- views/            # Different views of the application
-|   |-- Home/         # Home view displaying heroes
-|   |-- Login/        # Login view for user authentication
-|   |-- Movies/       # Movies view displaying Marvel movies
-|   |-- Comics/       # Comics view displaying Marvel comics
-|-- App.tsx           # Main application component
-|-- index.tsx         # Entry point of the application
+|-- assets/           # Recursos estáticos como imagens e fontes
+|-- components/       # Componentes reutilizáveis
+|   |-- common/       # Componentes comuns usados em diferentes views
+|   |   |-- Header/   # Componente Header com navegação responsiva
+|   |   |-- Layout/   # Componente Layout para layout de página consistente
+|   |   |-- MainCard/ # Componente Card usado para exibir heróis, filmes e quadrinhos
+|   |-- hooks/        # Hooks personalizados para buscar dados mock
+|-- data/             # Dados mock para heróis, filmes e quadrinhos
+|-- styles/           # Estilos globais e reutilizáveis
+|-- views/            # Diferentes views da aplicação
+|   |-- Home/         # View Home exibindo heróis
+|   |-- Login/        # View Login para autenticação de usuário
+|   |-- Movies/       # View Movies exibindo filmes da Marvel
+|   |-- Comics/       # View Comics exibindo quadrinhos da Marvel
+|-- App.tsx           # Componente principal da aplicação
+|-- index.tsx         # Ponto de entrada da aplicação
 ```
 
-## Custom Hooks
+## Hooks Personalizados
 
-The project utilizes custom hooks to fetch and manage mock data for heroes, movies, and comics:
+O projeto utiliza hooks personalizados para buscar e gerenciar dados mock para heróis, filmes e quadrinhos:
 
-- **useMockHeroes**: Fetches mock data for Marvel heroes.
-- **useMockMovies**: Fetches mock data for Marvel movies.
-- **useMockComics**: Fetches mock data for Marvel comics.
+- **useMockHeroes**: Busca dados mock para heróis da Marvel.
+- **useMockMovies**: Busca dados mock para filmes da Marvel.
+- **useMockComics**: Busca dados mock para quadrinhos da Marvel.
 
-These hooks use the `useState` and `useEffect` hooks to simulate fetching data from an API with a delay, providing a realistic data fetching experience.
+Esses customHooks usam os hooks `useState` e `useEffect` para simular a busca de dados de uma API, proporcionando uma experiência realista de busca de dados, além de deixar o código organizado e escalavel.
 
-## Screenshots
+## Capturas de Tela
 
-### Login Screen
+### Tela de Login
 
-![Login Screen](path/to/login-screen.png)
+![Tela de Login](path/to/login-screen.png)
 
 ### Dashboard
 
 ![Dashboard](path/to/dashboard.png)
 
-### Modal Open
+### Modal Aberto
 
-![Modal Open](path/to/modal-open.png)
+![Modal Aberto](path/to/modal-open.png)
 
-## Getting Started
+## Começando
 
-To get started with the project, follow these steps:
+Para começar com o projeto, siga estes passos:
 
-1. **Clone the repository**:
-
-   ```sh
-   git clone https://github.com/your-username/marvel-app.git
-   ```
-
-2. **Navigate to the project directory**:
+1. **Clone o repositório**:
 
    ```sh
-   cd marvel-app
+   git clone https://github.com/joaolrocha/avengers-project.git
    ```
 
-3. **Install dependencies**:
+2. **Navegue até o diretório do projeto**:
+
+   ```sh
+   cd avengers-project
+   ```
+
+3. **Instale as dependências**:
 
    ```sh
    npm install
    ```
 
-4. **Start the development server**:
+4. **Inicie o servidor de desenvolvimento**:
 
    ```sh
    npm start
    ```
 
-5. **Open your browser** and navigate to `http://localhost:3000`.
+5. **Abra seu navegador** e navegue para `http://localhost:3000`.
 
-## Conclusion
+## Conclusão
 
-This Marvel App project demonstrates a responsive design and the use of various modern web technologies to create a smooth and interactive user experience. Feel free to explore the codebase and customize it further as per your requirements. Happy coding!
+Este projeto do Aplicativo Marvel demonstra um design responsivo e o uso de várias tecnologias modernas da web para criar uma experiência de usuário suave e interativa. Sinta-se à vontade para explorar o código-fonte e personalizá-lo conforme suas necessidades.
 
 ---
 
-For any questions or suggestions, please feel free to reach out.
-
+Para quaisquer perguntas ou sugestões, sinta-se à vontade para entrar em contato.
+```
