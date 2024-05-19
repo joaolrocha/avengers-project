@@ -31,7 +31,7 @@ src/
 |   |   |-- Header/   # Componente Header com navegação responsiva
 |   |   |-- Layout/   # Componente Layout para layout de página consistente
 |   |   |-- MainCard/ # Componente Card usado para exibir heróis, filmes e quadrinhos
-|   |-- hooks/        # Hooks personalizados para buscar dados mock
+|-- hooks/            # Hooks personalizados para buscar dados mock
 |-- data/             # Dados mock para heróis, filmes e quadrinhos
 |-- styles/           # Estilos globais e reutilizáveis
 |-- views/            # Diferentes views da aplicação
@@ -57,15 +57,23 @@ Esses customHooks usam os hooks `useState` e `useEffect` para simular a busca de
 
 ### Tela de Login
 
-![Tela de Login](path/to/login-screen.png)
+![Tela de Login](src/assets/screenshots/loginscreen.png)
 
 ### Dashboard
 
-![Dashboard](path/to/dashboard.png)
+![Dashboard](src/assets/screenshots/dashboardoscreen.png)
 
 ### Modal Aberto
 
-![Modal Aberto](path/to/modal-open.png)
+![Modal Aberto](src/assets/screenshots/modalopenscreen.png)
+
+### Dashboard Mobile
+
+![Dashboard Mobile](src/assets/screenshots/dashboardmobile.png)
+
+### Modal Aberto Mobile
+
+![Modal Aberto Mobile](src/assets/screenshots/modalopenmobile.png)
 
 ## Começando
 
