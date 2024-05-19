@@ -1,7 +1,7 @@
 
 # Aplicativo Marvel
 
-Bem-vindo ao Aplicativo Marvel! Este projeto é um aplicativo web que apresenta personagens, filmes e quadrinhos da Marvel com um design responsivo e uma experiência de usuário suave. Os usuários podem fazer login, visualizar detalhes sobre seus heróis, filmes e quadrinhos favoritos da Marvel e navegar por um carrossel de itens. O projeto é construído usando React, TypeScript, Styled Components e hooks personalizados.
+Bem-vindo ao Aplicativo Marvel! Este projeto é um aplicativo web que apresenta personagens, filmes e quadrinhos da Marvel com um design responsivo e uma experiência de usuário suave. Os usuários podem fazer login, visualizar detalhes sobre seus heróis, filmes e quadrinhos favoritos da Marvel e navegar por um carrossel de itens. O projeto é construído usando React, TypeScript, Styled Components, hooks personalizados e localStorage.
 
 ## Índice
 
