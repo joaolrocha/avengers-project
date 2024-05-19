@@ -112,4 +112,3 @@ Este projeto do Aplicativo Marvel demonstra um design responsivo e o uso de vár
 ---
 
 Para quaisquer perguntas ou sugestões, sinta-se à vontade para entrar em contato.
-```
