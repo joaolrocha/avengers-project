@@ -1,8 +1,8 @@
 // src/data/mockComics.ts
 
-import ThorViking from '../assets/images/thor_viking.png';
-import SilverSurferParable from '../assets/images/silver_surfer_parable.png';
-import WolverineOrigins from '../assets/images/wolverine_origins.png';
+import ThorViking from '../assets/images/thorcomics.svg';
+import SilverSurferParable from '../assets/images/silversurfer.svg';
+import WolverineOrigins from '../assets/images/wolverine.svg';
 
 export interface Comic {
   id: number;
