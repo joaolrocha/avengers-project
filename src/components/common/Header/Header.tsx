@@ -1,6 +1,6 @@
 // src/components/common/Header/Header.tsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Avatar, Menu, MenuItem, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useAuth } from '../../../context/AuthContext';
@@ -17,6 +17,7 @@ import {
 } from './Header.styles';
 
 const Header: React.FC = () => {
+  const navigate= useNavigate()
   const { logout, user } = useAuth();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,6 +33,7 @@ const Header: React.FC = () => {
   const handleLogout = () => {
     logout();
     handleMenuClose();
+    navigate('/login')
   };
 
   const toggleMobileMenu = () => {
@@ -45,9 +47,9 @@ const Header: React.FC = () => {
       </LogoContainer>
       <Nav>
         <NavItems>
-          <NavItem to="/characters">Characters</NavItem>
-          <NavItem to="/movies">Movies</NavItem>
-          <NavItem to="/comics">Comics</NavItem>
+          <NavItem to="/home">Personagens</NavItem>
+          <NavItem to="/movies">Filmes</NavItem>
+          <NavItem to="/comics">HQs</NavItem>
         </NavItems>
         <UserContainer onClick={handleMenuClick}>
           <Avatar alt="User Avatar" src="/path/to/avatar.jpg" />
