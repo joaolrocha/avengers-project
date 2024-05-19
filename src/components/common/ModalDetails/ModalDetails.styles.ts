@@ -120,3 +120,7 @@ export const Star = styled.span`
   font-size: 20px;
   margin-right: 5px;
 `;
+
+export const AvailabilityContainer = styled.div`
+  margin-top: 20px;
+`;

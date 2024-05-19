@@ -52,24 +52,3 @@ const HeroDetailsModal: React.FC<HeroDetailsModalProps> = ({ isOpen, onClose, he
 
 export default HeroDetailsModal;
 
-
-{/* <ModalHeader>
-          
-        
-        </ModalHeader>
-        <HeroImage src={hero.image} alt={hero.name} />
-        <h3>Films</h3>
-        <FilmList>
-          {hero.films.map((film, index) => (
-            <FilmListItem key={index}>{film}</FilmListItem>
-          ))}
-        </FilmList>
-        <h3>Rating</h3>
-        <RatingStars>
-          {[...Array(hero.rating)].map((_, index) => (
-            <Star key={index}>★</Star>
-          ))}
-          {[...Array(5 - hero.rating)].map((_, index) => (
-            <Star key={index} style={{ color: 'gray' }}>★</Star>
-          ))}
-        </RatingStars> */}

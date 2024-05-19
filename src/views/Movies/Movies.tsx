@@ -1,19 +1,18 @@
-// src/views/Home/Home.tsx
-// src/views/Home/Home.tsx
+// src/views/Movies/Movies.tsx
 import React, { useState } from 'react';
 import Layout from '../../components/common/Layout/Layout';
-import useMockHeroes from '../../hooks/useMockHeroes';
+import mockMovies, { Movie } from '../../data/mockMovies';
 import MainCard from '../../components/common/MainCard/MainCard';
 
+import MovieFilter from '../../components/common/MovieFilter/MovieFilter';
 import Slider from 'react-slick';
-import { HomeContainer, CarouselWrapper, CustomArrow } from './Home.styles';
+import { HomeContainer, CarouselWrapper, CustomArrow } from '../Home/Home.styles';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import redArrow from '../../assets/images/redArrow.svg';
-import HeroDetailsModal from '../../components/common/ModalDetails/ModalDetails';
-import { Hero } from '../../data/mockHeroes';
+import MovieDetailsModal from '../../components/common/ModalMoviesDetails/ModalMoviesDetails';
 
 const NextArrow = (props: any) => {
   const { className, style, onClick } = props;
@@ -37,17 +36,24 @@ const PrevArrow = (props: any) => {
   );
 };
 
-const Home: React.FC = () => {
-  const heroes = useMockHeroes();
-  const [selectedHero, setSelectedHero] = useState<Hero | null>(null);
+const Movies: React.FC = () => {
+  const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
+  const [sortBy, setSortBy] = useState<string>('releaseDate');
 
-  const handleDetailsClick = (hero: Hero) => {
-    setSelectedHero(hero);
+  const handleDetailsClick = (movie: Movie) => {
+    setSelectedMovie(movie);
   };
 
   const handleCloseModal = () => {
-    setSelectedHero(null);
+    setSelectedMovie(null);
   };
+
+  const sortedMovies = [...mockMovies].sort((a, b) => {
+    if (sortBy === 'releaseDate') {
+      return new Date(a.releaseDate).getTime() - new Date(b.releaseDate).getTime();
+    }
+    return a.chronology - b.chronology;
+  });
 
   const settings = {
     dots: true,
@@ -70,29 +76,30 @@ const Home: React.FC = () => {
 
   return (
     <Layout>
+      <MovieFilter sortBy={sortBy} setSortBy={setSortBy} />
       <HomeContainer>
         <CarouselWrapper>
           <Slider {...settings}>
-            {heroes.map(hero => (
+            {sortedMovies.map(movie => (
               <MainCard
-                key={hero.id}
-                item={hero}
-                onDetailsClick={() => handleDetailsClick(hero)}
+                key={movie.id}
+                item={movie}
+                onDetailsClick={() => handleDetailsClick(movie)}
               />
             ))}
           </Slider>
         </CarouselWrapper>
       </HomeContainer>
-      {selectedHero && (
-        <HeroDetailsModal
-          isOpen={!!selectedHero}
+      {selectedMovie && (
+        <MovieDetailsModal
+          isOpen={!!selectedMovie}
           onClose={handleCloseModal}
-          hero={selectedHero}
+          movie={selectedMovie}
         />
       )}
     </Layout>
   );
 };
 
-export default Home;
+export default Movies;
 

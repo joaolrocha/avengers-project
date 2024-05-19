@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Header from './components/common/Header/Header';
 import Login from './views/Login/Login';
 import Home from './views/Home/Home';
+import Movies from './views/Movies/Movies';
 
 const AppContent: React.FC = () => {
   const { isLoggedIn } = useAuth();
@@ -16,6 +17,7 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/movies" element={<Movies />} />
         <Route path="/" element={<Login />} />
       </Routes>
     </>
