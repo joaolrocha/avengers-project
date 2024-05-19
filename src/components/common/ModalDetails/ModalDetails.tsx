@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Hero } from '../../../data/mockHeroes';
-import { FilmList, FilmListItem, HeroImage, ModalContent, ModalContentLeft, ModalContentRight, ModalOverlay, ModalTitle, RatingStars, Star } from './ModalDetails.styles';
+import { CloseButton, FansContainer, FilmList, FilmListItem, HeroImage, ModalContent, ModalContentLeft, ModalContentRight, ModalOverlay, ModalTitle, MoviesContainer, RatingStars, Star } from './ModalDetails.styles';
 
 interface HeroDetailsModalProps {
   isOpen: boolean;
@@ -22,21 +22,27 @@ const HeroDetailsModal: React.FC<HeroDetailsModalProps> = ({ isOpen, onClose, he
 
         <ModalContentRight>
           <ModalTitle>{hero.name}</ModalTitle>
-          <h3>Aparições</h3>
-          <FilmList>
-            {hero.films.map((film, index) => (
-              <FilmListItem key={index}>{film}</FilmListItem>
-            ))}
-          </FilmList>
-          <h3>Avaliações dos Fãs</h3>
-          <RatingStars>
-            {[...Array(hero.rating)].map((_, index) => (
-              <Star key={index}>★</Star>
-            ))}
-            {[...Array(5 - hero.rating)].map((_, index) => (
-              <Star key={index} style={{ color: 'gray' }}>★</Star>
-            ))}
-          </RatingStars>
+          <MoviesContainer>
+            <h3>Aparições</h3>
+            <FilmList>
+              {hero.films.map((film, index) => (
+                <FilmListItem key={index}>{film}</FilmListItem>
+              ))}
+            </FilmList>
+          </MoviesContainer>
+          <FansContainer>
+            <h3>Avaliações dos Fãs</h3>
+            <RatingStars>
+              {[...Array(hero.rating)].map((_, index) => (
+                <Star key={index}>★</Star>
+              ))}
+              {[...Array(5 - hero.rating)].map((_, index) => (
+                <Star key={index} style={{ color: 'gray' }}>★</Star>
+              ))}
+            </RatingStars>
+          </FansContainer>
+
+          <CloseButton onClick={onClose}>&times;</CloseButton>
         </ModalContentRight>
 
       </ModalContent>
@@ -49,7 +55,7 @@ export default HeroDetailsModal;
 
 {/* <ModalHeader>
           
-          <CloseButton onClick={onClose}>&times;</CloseButton>
+        
         </ModalHeader>
         <HeroImage src={hero.image} alt={hero.name} />
         <h3>Films</h3>

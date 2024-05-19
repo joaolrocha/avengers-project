@@ -16,15 +16,12 @@ export const ModalOverlay = styled.div<{ isOpen: boolean }>`
 export const ModalContent = styled.div`
   background: linear-gradient(to bottom, rgba(255, 0, 0, 1), rgba(64, 14, 14, 0.5));
   border-radius: 10px;
-  /* padding: 20px; */
+
   width: 650px;
   height: 450px;
   color: white;
   font-family: 'Kastelov - Axiforma', Arial, sans-serif;
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
   position: relative;
 `;
 
@@ -42,7 +39,6 @@ export const ModalContentRight = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
 
 
 `
@@ -59,10 +55,18 @@ export const ModalHeader = styled.div`
 `;
 
 export const ModalTitle = styled.h2`
-  margin: 0;
+  display: flex;
+  width: 100%;
+  padding: 3rem;
 `;
 
 export const CloseButton = styled.button`
+display: flex;
+width: 100%;
+justify-content: flex-end;
+padding-right: 2rem;
+/* border: 1px solid #fff; */
+border-radius: 30px;
   background: none;
   border: none;
   color: white;
@@ -82,6 +86,24 @@ export const FilmList = styled.ul`
   padding: 0;
   margin: 0;
 `;
+
+export const FansContainer = styled.div `
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 3rem;
+
+`
+
+export const MoviesContainer = styled.div `
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 3rem;
+  height: 13rem;
+`
 
 export const FilmListItem = styled.li`
   margin-bottom: 5px;
